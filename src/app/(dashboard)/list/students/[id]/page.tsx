@@ -5,7 +5,7 @@ import Link from "next/link";
 import Performance from "@/components/Performance";
 
 
-export default function SingleTeacherPage() {
+export default function SingleStudentsPage() {
   return (
     <div className="flex-1 p-4 flex flex-col gap-4 xl:flex-row">
      {/* {Left} */}
@@ -15,11 +15,11 @@ export default function SingleTeacherPage() {
         {/* User Info Card */}
         <div className="bg-lamaSky py-3 px-2 rounded-md flex-1 flex gap-4">
             <div className="w-1/3">
-                <Image src={"https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200"} alt={""} width={124} height={124} className="w-36 h-36 rounded-full object-cover"/>
+                <Image src={"https://images.pexels.com/photos/5414817/pexels-photo-5414817.jpeg?auto=compress&cs=tinysrgb&w=1200"} alt={""} width={124} height={124} className="w-36 h-36 rounded-full object-cover"/>
             </div>
             <div className="w-2/3 flex flex-col justify-between  gap-2">
             
-            <h1 className="font-semibold text-xl ">Leonard Synard</h1>
+            <h1 className="font-semibold text-xl ">Cameron Moran</h1>
             <p className="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <div className="flex items-center justify-between  gap-2 flex-wrap text-xs font-medium">
                 <div className="w-full md:w-1/3  lg:w-full 2xl:w-1/3 flex items-center gap-2">
@@ -67,8 +67,8 @@ export default function SingleTeacherPage() {
                 className="w-6 h-6"
               />
               <div className="">
-                <h1 className="text-xl font-semibold">2</h1>
-                <span className="text-sm text-gray-400">Branches</span>
+                <h1 className="text-xl font-semibold">6th</h1>
+                <span className="text-sm text-gray-400">Grade</span>
               </div>
             </div>
             {/* CARD */}
@@ -81,7 +81,7 @@ export default function SingleTeacherPage() {
                 className="w-6 h-6"
               />
               <div className="">
-                <h1 className="text-xl font-semibold">6</h1>
+                <h1 className="text-xl font-semibold">18</h1>
                 <span className="text-sm text-gray-400">Lessons</span>
               </div>
             </div>
@@ -95,8 +95,8 @@ export default function SingleTeacherPage() {
                 className="w-6 h-6"
               />
               <div className="">
-                <h1 className="text-xl font-semibold">6</h1>
-                <span className="text-sm text-gray-400">Classes</span>
+                <h1 className="text-xl font-semibold">6A</h1>
+                <span className="text-sm text-gray-400">Class</span>
               </div>
             </div>
         </div>
@@ -112,11 +112,11 @@ export default function SingleTeacherPage() {
         <div className="bg-white p-3 rounded-md">
             <h1 className="text-xl ml-2 font-semibold">Shortcuts</h1>
             <div className="mt-4 flex gap-3 flex-wrap text-xs  text-gray-500">
-                <Link  className="p-3 rounded-md bg-lamaSkyLight" href={""}>Teacher&apos;s Classes</Link>
-                <Link className="p-3 rounded-md bg-lamaPurpleLight"  href={""}>Teacher&apos;s Students</Link>
-                <Link className="p-3 rounded-md bg-lamaSky"  href={""}>Teacher&apos;s Students</Link>
-                <Link className="p-3 rounded-md bg-lamaYellowLight"  href={""}>Teacher&apos;s Exams</Link>
-                <Link className="p-3 rounded-md bg-pink-50"  href={""}>Teacher&apos;s Assignments</Link>
+                <Link  className="p-3 rounded-md bg-lamaSkyLight" href={""}>Student&apos;s Class</Link>
+                <Link className="p-3 rounded-md bg-lamaPurpleLight"  href={""}>Student&apos;s Teachers</Link>
+                <Link className="p-3 rounded-md bg-lamaSky"  href={""}>Student&apos;s Results</Link>
+                <Link className="p-3 rounded-md bg-lamaYellowLight"  href={""}>Student&apos;s Exams</Link>
+                <Link className="p-3 rounded-md bg-pink-50"  href={""}>Student&apos;s Assignments</Link>
             </div>
         </div>
         <Performance/>
