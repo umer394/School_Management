@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import TeacherForm from "./forms/TeacherForm";
 
 export default function FormModal({ table, type, data, id }: {
     table:
@@ -29,7 +30,7 @@ export default function FormModal({ table, type, data, id }: {
         return type === "delete" && id ? <form action="" className="p-4 flex flex-col  gap-4">
             <span className="text-center font-medium">All data will be lost. Are you sure to delete this {table}</span>
             <button className="bg-red-700 text-white py-2 px-4 rounded-md border-none w-max self-center">Delete</button>
-        </form> : "create or update form"
+        </form> : <TeacherForm type="create"/>
     }
     return (
         <>
