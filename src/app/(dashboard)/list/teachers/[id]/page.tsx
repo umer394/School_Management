@@ -3,6 +3,7 @@ import BigCalendar from "@/components/BigCalendar";
 import Image from "next/image";
 import Link from "next/link";
 import Performance from "@/components/Performance";
+import FormModal from "@/components/FormModal";
 
 
 export default function SingleTeacherPage() {
@@ -18,8 +19,24 @@ export default function SingleTeacherPage() {
                 <Image src={"https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200"} alt={""} width={124} height={124} className="w-36 h-36 rounded-full object-cover"/>
             </div>
             <div className="w-2/3 flex flex-col justify-between  gap-2">
-            
+            <div className="flex items-center gap-4">
+
             <h1 className="font-semibold text-xl ">Leonard Synard</h1>
+            <FormModal table="teacher" type="update" data={
+              {id: 1,
+                username: "deanguerrero",
+                email: "deanguerrero@gmail.com",
+                password: "password",
+                firstName: "Dean",
+                lastName: "Guerrero",
+                phone: "+1 234 567 89",
+                address: "1234 Main St, Anytown, USA",
+                bloodType: "A+",
+                dateOfBirth: "2000-01-01",
+                sex: "male",
+                img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200",}
+              }/>
+              </div>
             <p className="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <div className="flex items-center justify-between  gap-2 flex-wrap text-xs font-medium">
                 <div className="w-full md:w-1/3  lg:w-full 2xl:w-1/3 flex items-center gap-2">
@@ -113,7 +130,7 @@ export default function SingleTeacherPage() {
             <h1 className="text-xl ml-2 font-semibold">Shortcuts</h1>
             <div className="mt-4 flex gap-3 flex-wrap text-xs  text-gray-500">
                 <Link  className="p-3 rounded-md bg-lamaSkyLight" href={""}>Teacher&apos;s Classes</Link>
-                <Link className="p-3 rounded-md bg-lamaPurpleLight"  href={""}>Teacher&apos;s Students</Link>
+                <Link className="p-3 rounded-md bg-lamaPurpleLight"  href={`/list/students?teacherId=${"teacher2"}`}>Teacher&apos;s Students</Link>
                 <Link className="p-3 rounded-md bg-lamaSky"  href={""}>Teacher&apos;s Students</Link>
                 <Link className="p-3 rounded-md bg-lamaYellowLight"  href={""}>Teacher&apos;s Exams</Link>
                 <Link className="p-3 rounded-md bg-pink-50"  href={""}>Teacher&apos;s Assignments</Link>
