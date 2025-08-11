@@ -52,10 +52,10 @@ const renderRow = (item: ClassesListType) => (
         </td>
     </tr>
 )
-export default async function ClassesList({ searchParams, }: { searchParams?: { [key:string] : string | undefined } }) {
+export default async function ClassesList({ searchParams, }: { searchParams: Promise<{ [key:string]:string| undefined}>  }) {
 
-    const { page,...queryParams} = searchParams || {}
-    const p = page ? parseInt(Array.isArray(page) ? page[0] : page) : 1;
+    const { page,...queryParams} = await searchParams
+    const p = page ? parseInt(page) : 1;
 
     // URL Params Condition
 

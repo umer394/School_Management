@@ -49,13 +49,13 @@ const renderRow = (item: AnnouncementsListType) => (
         </td>
     </tr>
 )
-export default async function AnnouncementsList({ searchParams, }: { searchParams?: { [key:string] : string | undefined } }) {
+export default async function AnnouncementsList({ searchParams, }: { searchParams: Promise<{ [key:string]:string| undefined}>  }) {
 
     // const searchParams = useSearchParams()  This is easy but we can't use it in server component
     // const page = page ? parseInt(page) : 1;
     // const page = searchParams.page ? parseInt(searchParams.page) : 1;
-    const { page,...queryParams} = searchParams || {};
-    const p = page ? parseInt(Array.isArray(page) ? page[0] : page) : 1;
+    const { page,...queryParams} = await searchParams ;
+    const p = page ? parseInt(page) : 1;
 
     // URL Params Condition
 
